@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        h1{
+            margin: 0;
+            padding: 20px 0;
+        }
+        header{
+            width: 100%;
+            height: 75px;
+            background: #000e2f;
+            position: fixed;
+            top:0;
+            left:0;
+            z-index: 3;
+        }
+        header div#logo{
+            height: 75px;
+            line-height: 75px;
+            font-size: 30px;
+            color:#cde0ff;
+            padding-left: 20px;
+            float: left;
+        }
+        header nav{
+            height: 75px;
+            line-height: 75px;
+            float: right;
+        }
+        nav ul{
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li{
+            display: inline-block;
+        }
+        nav a{
+            display: block;
+            padding: 0 20px;
+            color: #cde0ff;
+            text-decoration: none;
+        }
+        nav a:hover{
+            color: #FFF;
+            background: #152f6d;
+        }
+        section#slider{
+            width: 100%;
+            height: calc(80% - 75px);
+            background:#0680ff;
+            position: fixed;
+            top:75px;
+            left: 0;
+            z-index: 1;
+        }
+        @keyframes slideShow {
+            0%{
+                opacity: 0;
+            }
+            10%{
+                opacity: 1;
+            }
+            30%{
+                transform: translateX(0);
+            }
+            40%{
+                transform: translateX(-33.33%);
+            }
+            60%{
+                transform: translateX(-33.33%);
+            }
+            70%{
+                transform: translateX(-66.66%);
+            }
+            90%{
+                transform: translateX(-66.66%);
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+                transform: translateX(-66.66%);
+            }
+        }
+        section#slider ul{
+            width: 300%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            animation: slideShow 8s;
+            animation-iteration-count: infinite;
+        }
+        section#slider ul li{
+            width: 33.33%;
+            height: 100%;
+            display: inline-block;
+            position: relative;
+        }
+        section#slider div{
+            width: 250px;
+            height: 80px;
+            border: 4px solid #FFF;
+            text-align: center;
+            line-height: 80px;
+            color: #FFF;
+            font-size: 25px;
+            position: absolute;
+            margin: auto;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        main{
+            width: 100%;
+            min-height: 100%;
+            background: #FFF;
+            text-align: center;
+            position: absolute;
+            top: 80%;
+            left:0;
+            z-index: 2;
+        }
+        .yellow{
+            background-color: #fc870b;
+        }
+        .green{
+            background-color: #24b855;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div id="logo">
+        MySite
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li><li><a href="#">AboutUs</a></li><li><a href="#">Services</a></li><li><a href="#">Blog</a></li><li><a href="#">Support</a></li>
+        </ul>
+    </nav>
+</header>
+<section id="slider">
+    <ul>
+        <li><div>Our Company</div></li><li class="green"><div>Our Services</div></li><li class="yellow"><div>Our Goals</div></li>
+    </ul>
+</section>
+<main>
+    <h1>Our Future</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur et incidunt inventore itaque maiores minus, modi pariatur placeat possimus quo quod sapiente sed sint sunt tempora unde veniam. Unde?</p>
+</main>
+
+</body>
+</html>
